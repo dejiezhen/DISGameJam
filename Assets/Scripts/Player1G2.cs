@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player1 : MonoBehaviour
 {
-    public float movementHorizontal, movementVertical;
+    public float movementHorizontal, movementVertical,speed;
     // Start is called before the first frame update
     void Start()
     {
