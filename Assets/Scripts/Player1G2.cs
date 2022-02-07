@@ -6,7 +6,6 @@ public class Player1G2 : MonoBehaviour
 {
     public float movementHorizontal, movementVertical, speed;
     Rigidbody2D rb;
-
     // Start is called before the first frame update
     void Start()
     {
