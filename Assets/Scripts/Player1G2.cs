@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player1 : MonoBehaviour
+public class Player1G2 : MonoBehaviour
 {
-    public float movementHorizontal, movementVertical,speed;
+    public float movementHorizontal, movementVertical, speed;
+    Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
@@ -16,20 +18,13 @@ public class Player1 : MonoBehaviour
     {
         movementHorizontal = 0;
         movementVertical = 0;
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.W))
         {
-            movementVertical = speed;
+            movementVertical = speed * 1;
             //spriteAnimation(spriteUpFrames, spriteUpFrames.Length);
 
         }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            movementVertical = -speed;
-            //spriteAnimation(spriteDownFrames, spriteDownFrames.Length);
-
-
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A))
         {
             movementHorizontal = -speed;
             //spriteAnimation(spriteSideFrames, spriteSideFrames.Length);
@@ -37,7 +32,7 @@ public class Player1 : MonoBehaviour
 
 
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))
         {
             movementHorizontal = speed;
             //sr.flipX = false;
@@ -45,5 +40,8 @@ public class Player1 : MonoBehaviour
 
 
         }
+        rb.velocity = new Vector2(movementHorizontal, movementVertical) * speed;
+
+
     }
 }

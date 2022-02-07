@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 789735193097634993}
   - component: {fileID: 6745390524701619929}
+  - component: {fileID: 118526885075846200}
   m_Layer: 0
   m_Name: ducksabre_0
   m_TagString: Untagged
@@ -82,3 +83,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &118526885075846200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7758753826719663271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e504076ca27d46fbb2888dea2c0995e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementHorizontal: 0
+  movementVertical: 0
+  speed: 2
