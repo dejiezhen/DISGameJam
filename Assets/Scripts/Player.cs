@@ -5,7 +5,5 @@ using UnityEngine;
 public abstract class Player : MonoBehaviour
 {
     // Start is called before the first frame update
-    public abstract Swing () { }
-
-    
+    public abstract void Swing();
 }
