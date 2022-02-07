@@ -8,6 +8,7 @@ public class duck : MonoBehaviour
   
     private Rigidbody2D myRb2D;
     public float jumpForce;
+    private bool grounding;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,11 +23,12 @@ public class duck : MonoBehaviour
         //transform.position += Vector3.right * speed * Time.deltaTime;
 
         Vector2 vel = myRb2D.velocity;
-        if (Input.GetKeyDown(KeyCode.Space)) //sprite up
+        if (Input.GetKeyDown(KeyCode.Space) && grounding) //sprite up
         {
 
             vel.y = jumpForce;
             myRb2D.velocity = vel;
+            grounding = false;
 
         }
 
@@ -34,9 +36,17 @@ public class duck : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            grounding = true;
+        }
+
+
         if (collision.gameObject.CompareTag("Lava"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+       
+
     }
 }
