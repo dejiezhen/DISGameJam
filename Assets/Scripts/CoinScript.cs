@@ -5,12 +5,14 @@ using UnityEngine;
 public class CoinScript : MonoBehaviour
 {
     public float speed;
-
     public float timer;
+    public int max_int;
+    public int min_int;
 
     private Vector2 newPosition;
 
     private Rigidbody2D rb2d;
+
 
 
     void Start()
@@ -18,19 +20,22 @@ public class CoinScript : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer -= Time.deltaTime;
-        rb2d.velocity = newPosition * speed;
+        rb2d.velocity = newPosition.normalized * speed;
 
         if (timer < 0.0f)
         {
-            if (transform.position.x > -8 && transform.position.x < 8 && transform.position.y < 4 && transform.position.y > 0);
+            if((-8 <= transform.position.x && transform.position.x <= 8) && (0 <= transform.position.y && transform.position.y <= 4))
             {
-                newPosition = new Vector2(Random.Range(-2, 2), Random.Range(-2, 2));
+                newPosition = new Vector2(Random.Range(min_int, max_int), Random.Range(min_int, max_int));
             }
-
+            else
+            {
+                newPosition = -newPosition;
+            }
+            
 
             timer = 1;
         }
