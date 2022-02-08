@@ -123,7 +123,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
+--- !u!1 &44269132 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1295395823580693756, guid: 71faffb035e7f4e82b77a286b377d674, type: 3}
+  m_PrefabInstance: {fileID: 4652157649356492296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &44269133
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44269132}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &44269134
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44269132}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1333333, y: 1.0333333}
+    newSize: {x: 1.882353, y: 1.6470588}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.23529412, y: 0.8235294}
+      - {x: -0.9411765, y: -0.1764706}
+      - {x: -0.9411765, y: -0.8235294}
+      - {x: 0.9411765, y: -0.8235294}
+      - {x: 0.9411765, y: 0.8235294}
+--- !u!1001 &361743716
+=======
 --- !u!1001 &227599960
+>>>>>>> 50422ab2858ec0523b8b99e2a09d6c2a3b3faad2
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -195,9 +255,15 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 7163760672442331122, guid: 5f54d3cb205424d7687625b4f6dd73a6, type: 3}
+      propertyPath: max_int
+      value: 6
+=======
     - target: {fileID: 5103203194012924678, guid: f00a67d39ea83429d9a2486bcd37f96e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.16
+>>>>>>> 50422ab2858ec0523b8b99e2a09d6c2a3b3faad2
       objectReference: {fileID: 0}
     - target: {fileID: 5103203194012924678, guid: f00a67d39ea83429d9a2486bcd37f96e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -433,6 +499,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6d0fe8214cb6437693fb50ac40065d6, type: 3}
+<<<<<<< HEAD
+--- !u!1 &953608814 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8717478525841686248, guid: 5f54d3cb205424d7687625b4f6dd73a6, type: 3}
+  m_PrefabInstance: {fileID: 361743716}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &953608819
+CircleCollider2D:
+=======
 --- !u!1 &726194432
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,10 +526,23 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &726194433
 Transform:
+>>>>>>> 50422ab2858ec0523b8b99e2a09d6c2a3b3faad2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 953608814}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.4
+=======
   m_GameObject: {fileID: 726194432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: -2.7, z: -6.1241317}
@@ -540,6 +628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e3898dd7f6bf4205b52b06880359941, type: 3}
+>>>>>>> 50422ab2858ec0523b8b99e2a09d6c2a3b3faad2
 --- !u!1 &988433092 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7758753826719663271, guid: 40e9aae91e34645e68e2c8b7184f88c4, type: 3}
@@ -562,7 +651,11 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
+    oldSize: {x: 1.1333333, y: 1.0333333}
+=======
     oldSize: {x: 1.0666667, y: 0.93333334}
+>>>>>>> 50422ab2858ec0523b8b99e2a09d6c2a3b3faad2
     newSize: {x: 1.882353, y: 1.6470588}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

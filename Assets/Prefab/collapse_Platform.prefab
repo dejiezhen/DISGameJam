@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 6411250702875519176}
   - component: {fileID: 8332215438767069051}
   - component: {fileID: -212992253137555700}
+  - component: {fileID: 4732766492402846980}
   m_Layer: 0
-  m_Name: Platform_prefab
+  m_Name: collapse_Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,3 +127,18 @@ PolygonCollider2D:
       - {x: 1.8111508, y: 0.24430871}
       - {x: 1.986584, y: 0.45856893}
       - {x: 2, y: 0.65000004}
+--- !u!114 &4732766492402846980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2707256129010449905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c1659fd993f4c9497036f85ddda0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contantTime: 3
+  DistructionTimer: 3
+  RespawnTimer: 3
