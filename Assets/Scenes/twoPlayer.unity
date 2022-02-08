@@ -1232,7 +1232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3908483485110208490, guid: 71faffb035e7f4e82b77a286b377d674, type: 3}
       propertyPath: sideForce
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3908483485110208490, guid: 71faffb035e7f4e82b77a286b377d674, type: 3}
       propertyPath: knockbackForce
@@ -1415,7 +1415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 118526885075846200, guid: 40e9aae91e34645e68e2c8b7184f88c4, type: 3}
       propertyPath: sideForce
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 118526885075846200, guid: 40e9aae91e34645e68e2c8b7184f88c4, type: 3}
       propertyPath: knockbackForce
