@@ -166,7 +166,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.68, y: 0.62}
+    oldSize: {x: 1.1333333, y: 1.0333333}
     newSize: {x: 1.882353, y: 1.6470588}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -236,7 +236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7163760672442331122, guid: 5f54d3cb205424d7687625b4f6dd73a6, type: 3}
       propertyPath: max_int
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7163760672442331122, guid: 5f54d3cb205424d7687625b4f6dd73a6, type: 3}
       propertyPath: min_int
@@ -444,6 +444,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6d0fe8214cb6437693fb50ac40065d6, type: 3}
+--- !u!1 &953608814 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8717478525841686248, guid: 5f54d3cb205424d7687625b4f6dd73a6, type: 3}
+  m_PrefabInstance: {fileID: 361743716}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &953608819
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953608814}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.4
 --- !u!1 &988433092 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7758753826719663271, guid: 40e9aae91e34645e68e2c8b7184f88c4, type: 3}
@@ -466,7 +487,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.68, y: 0.62}
+    oldSize: {x: 1.1333333, y: 1.0333333}
     newSize: {x: 1.882353, y: 1.6470588}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
