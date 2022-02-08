@@ -45,15 +45,15 @@ public class duck : MonoBehaviour
     {
         //Vector2 normalizedDir = myRb2D.velocity.normalized;
         //transform.position += Vector3.right * speed * Time.deltaTime;
-        if (jumpCount == 15)
+        if (jumpCount == 20)
         {
             win.enabled = true;
             balloon1.gameObject.SetActive(true);
             balloon2.gameObject.SetActive(true);
             timer++;
-            if (timer >= 200)
+            if (timer >= 150)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene("mainMenu");
             }
             
         }
