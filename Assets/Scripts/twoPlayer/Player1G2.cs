@@ -11,9 +11,7 @@ public class Player1G2 : Player
     SpriteRenderer sr;
     public Sprite[] spriteSideFrames;
     public Sprite[] spriteAttack;
-
     public Player_1_Scoreboard P1Score;
-
     public AudioClip[] attackSound;
     private AudioSource myAudioSource;
     // Start is called before the first frame update
@@ -56,42 +54,15 @@ public class Player1G2 : Player
         }
 
         rb.velocity = new Vector2(moveX, rb.velocity.y);
-
-        //Vector2 origin = transform.position;
-        //Vector2 horizontalTarget = origin;
-        ////Vector2 verticalTarget = origin;
-        //horizontalTarget.x += 1;
-        ////verticalTarget.y += 1;
-        //Vector2 horizontalDir = horizontalTarget - origin;
-        ////Vector2 verticalDir = verticalTarget - origin;
-
-        //RaycastHit2D hitLeft = Physics2D.Raycast(origin, -horizontalDir, horizontalDir.magnitude);
-        //RaycastHit2D hitRight = Physics2D.Raycast(origin, horizontalDir, horizontalDir.magnitude);
      
         if (Input.GetKey(KeyCode.LeftShift))
         {
             sr.sprite = spriteAttack[0];
             myAudioSource.PlayOneShot(attackSound[0]);
-
-
-            //if (hitLeft)
-            //{
-            //    HitDirection(hitLeft);
-            //} else if (hitRight)
-            //{
-            //    HitDirection(hitRight);
-            //}
         }
 
     }
-    //public void HitDirection(RaycastHit2D hit)
-    //{
-    //    Player player = hit.collider.gameObject.GetComponent<Player>();
-    //    if (player)
-    //    {
-    //        //player.Knockback();
-    //    }
-    //}
+  
     public void spriteAnimation(Sprite[] frames, int frameLength)
     {
         if (currentFrame >= frameLength)
@@ -142,9 +113,6 @@ public class Player1G2 : Player
         else
         {
             enemyRb.velocity = new Vector2(-knockbackForce, knockbackForce);
-            //Vector2 vel = enemyRb.velocity;
-            //vel.x = knockbackForce;
-            //enemyRb.velocity = vel;
 
         }
     }

@@ -11,7 +11,6 @@ public class Player2G2 : Player
     SpriteRenderer sr;
     public Sprite[] spriteSideFrames;
     public Sprite[] spriteAttack;
-
     public Player_1_Scoreboard P2Score;
     public AudioClip[] attackSound;
     private AudioSource myAudioSource;
@@ -34,7 +33,9 @@ public class Player2G2 : Player
         moveY = 0;
 
         bool groundCheck = Physics2D.Raycast(transform.position, Vector2.down, .5f, LayerMask.GetMask("Floor"));
-        if (Input.GetKeyDown(KeyCode.UpArrow) && groundCheck)
+        bool secondGroundCheck = Physics2D.Raycast(transform.position, Vector2.down, .5f, LayerMask.GetMask("obstacle"));
+
+        if (Input.GetKeyDown(KeyCode.UpArrow) && (groundCheck || secondGroundCheck))
         {
             rb.AddForce(Vector2.up * jumpForce);
         }
@@ -71,26 +72,10 @@ public class Player2G2 : Player
             sr.sprite = spriteAttack[0];
             myAudioSource.PlayOneShot(attackSound[0]);
 
-            //if (hitLeft)
-            //{
-            //    HitDirection(hitLeft);
-            //}
-            //if (hitRight)
-            //{
-            //    HitDirection(hitRight);
-            //}
         }
 
     }
-    //public void HitDirection(RaycastHit2D hit)
-    //{
-    //    var player = hit.collider.gameObject.GetComponent<Player1G2>();
-    //    if (player)
-    //    {
-    //        Debug.Log("Hit!");
-    //        //player.Knockback();
-    //    }
-    //}
+
     public void spriteAnimation(Sprite[] frames, int frameLength)
     {
         if (currentFrame >= frameLength)
@@ -131,11 +116,11 @@ public class Player2G2 : Player
 
     public override void Knockback(Player enemy)
     {
-        Debug.Log("Knock!");
         Rigidbody2D enemyRb = enemy.GetComponent<Rigidbody2D>();
         SpriteRenderer enemySr = enemy.GetComponent<SpriteRenderer>();
         if (enemySr.flipX)
         {
+         
             enemyRb.velocity = new Vector2(knockbackForce, knockbackForce);
 
         }

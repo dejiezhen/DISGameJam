@@ -11,6 +11,8 @@ public class Player_1_Scoreboard : MonoBehaviour
 
     public float contstant_timer;
 
+    public float loadMainScreenTimer;
+
     private float timer;
 
     private SpriteRenderer current_score;
@@ -18,6 +20,7 @@ public class Player_1_Scoreboard : MonoBehaviour
     private void Start()
     {
         current_score = GetComponent<SpriteRenderer>();
+        loadMainScreenTimer = 5;
     }
 
     private void Update()
@@ -25,12 +28,32 @@ public class Player_1_Scoreboard : MonoBehaviour
         timer -= Time.deltaTime;
         current_score.sprite = Scores[score_counter];
 
-        if(score_counter >= 3)
+        if(score_counter >= 4)
         {
+            loadMainScreenTimer -= Time.deltaTime;
+            if (loadMainScreenTimer <= 0)
+            {
+                SceneManager.LoadScene("mainMenu");
 
+            }
+ 
         }
 
     }
+
+    public void pauseGame()
+    {
+        StartCoroutine(GamePauser());
+    }
+    public IEnumerator GamePauser()
+    {
+        Debug.Log("Inside PauseGame()");
+        yield return new WaitForSeconds(3);
+        Debug.Log("Done with my pause");
+        SceneManager.LoadScene("mainMenu");
+
+    }
+
 
     public void increment()
     {
