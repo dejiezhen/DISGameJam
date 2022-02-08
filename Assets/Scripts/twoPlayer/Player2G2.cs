@@ -5,19 +5,26 @@ using UnityEngine;
 public class Player2G2 : Player
 {
     // Start is called before the first frame update
-    public float jumpForce, sideForce, knockbackForce;
+    public float jumpForce, sideForce, knockbackForce,moveX, moveY;
     public int currentFrame;
     Rigidbody2D rb;
     SpriteRenderer sr;
     public Sprite[] spriteSideFrames;
     public Sprite[] spriteAttack;
+<<<<<<< HEAD
 
     public Player_1_Scoreboard P2Score;
 
+=======
+    public AudioClip[] attackSound;
+    private AudioSource myAudioSource;
+>>>>>>> e98cb6fceaeb10a60f89128d4fad3565d3481fe1
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        myAudioSource = GetComponent<AudioSource>();
+
         currentFrame = 1;
     }
 
@@ -27,6 +34,9 @@ public class Player2G2 : Player
         sr.sprite = spriteSideFrames[0];
         sr.color = new Color(0, 255, 255, 255);
 
+        moveX = 0;
+        moveY = 0;
+
         bool groundCheck = Physics2D.Raycast(transform.position, Vector2.down, .5f, LayerMask.GetMask("Floor"));
         if (Input.GetKeyDown(KeyCode.UpArrow) && groundCheck)
         {
@@ -35,16 +45,21 @@ public class Player2G2 : Player
         if (Input.GetKey(KeyCode.LeftArrow))
         {
 
+
             sr.flipX = true;
             spriteAnimation(spriteSideFrames, spriteSideFrames.Length);
-            rb.AddForce(Vector2.left * sideForce);
+            //rb.AddForce(Vector2.left * sideForce);
+            moveX = -sideForce;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
             sr.flipX = false;
             spriteAnimation(spriteSideFrames, spriteSideFrames.Length);
-            rb.AddForce(Vector2.right * sideForce);
+            moveX = sideForce;
         }
+
+        rb.velocity = new Vector2(moveX, rb.velocity.y);
+
 
         Vector2 origin = transform.position;
         Vector2 horizontalTarget = origin;
@@ -58,6 +73,8 @@ public class Player2G2 : Player
         if (Input.GetKey(KeyCode.RightShift))
         {
             sr.sprite = spriteAttack[0];
+            myAudioSource.PlayOneShot(attackSound[0]);
+
             //if (hitLeft)
             //{
             //    HitDirection(hitLeft);
