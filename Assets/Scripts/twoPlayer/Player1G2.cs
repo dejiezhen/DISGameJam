@@ -11,6 +11,9 @@ public class Player1G2 : Player
     SpriteRenderer sr;
     public Sprite[] spriteSideFrames;
     public Sprite[] spriteAttack;
+
+    public Player_1_Scoreboard P1Score;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -94,6 +97,23 @@ public class Player1G2 : Player
             Debug.Log("Hit");
             Player enemy = collision.gameObject.GetComponent<Player>();
             Knockback(enemy);
+        }
+
+        if (collision.gameObject.CompareTag("coin"))
+        {
+            Debug.Log("Hit COIN");
+            P1Score.increment();
+        }
+
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Lava"))
+        {
+            Debug.Log("hit lava");
+            P1Score.decrease();
         }
     }
 

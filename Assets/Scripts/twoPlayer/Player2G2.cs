@@ -11,6 +11,9 @@ public class Player2G2 : Player
     SpriteRenderer sr;
     public Sprite[] spriteSideFrames;
     public Sprite[] spriteAttack;
+
+    public Player_1_Scoreboard P2Score;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -93,6 +96,23 @@ public class Player2G2 : Player
             Debug.Log("Hit");
             Player enemy = collision.gameObject.GetComponent<Player>();
             Knockback(enemy);
+        }
+
+        if (collision.gameObject.CompareTag("coin"))
+        {
+            Debug.Log("Hit COIN");
+            P2Score.increment();
+        }
+
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Lava"))
+        {
+            Debug.Log("hit lava");
+            P2Score.decrease();
         }
     }
 

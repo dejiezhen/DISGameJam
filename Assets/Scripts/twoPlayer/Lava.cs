@@ -21,6 +21,7 @@ public class Lava : MonoBehaviour
             other.transform.position = respawnPoint;
         }
 
+
     }
 
 }
