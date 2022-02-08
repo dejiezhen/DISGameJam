@@ -11,14 +11,9 @@ public class Player2G2 : Player
     SpriteRenderer sr;
     public Sprite[] spriteSideFrames;
     public Sprite[] spriteAttack;
-<<<<<<< HEAD
-
     public Player_1_Scoreboard P2Score;
-
-=======
     public AudioClip[] attackSound;
     private AudioSource myAudioSource;
->>>>>>> e98cb6fceaeb10a60f89128d4fad3565d3481fe1
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -38,7 +33,9 @@ public class Player2G2 : Player
         moveY = 0;
 
         bool groundCheck = Physics2D.Raycast(transform.position, Vector2.down, .5f, LayerMask.GetMask("Floor"));
-        if (Input.GetKeyDown(KeyCode.UpArrow) && groundCheck)
+        bool secondGroundCheck = Physics2D.Raycast(transform.position, Vector2.down, .5f, LayerMask.GetMask("obstacle"));
+
+        if (Input.GetKeyDown(KeyCode.UpArrow) && (groundCheck || secondGroundCheck))
         {
             rb.AddForce(Vector2.up * jumpForce);
         }

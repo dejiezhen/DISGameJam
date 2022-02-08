@@ -11,14 +11,9 @@ public class Player1G2 : Player
     SpriteRenderer sr;
     public Sprite[] spriteSideFrames;
     public Sprite[] spriteAttack;
-<<<<<<< HEAD
-
     public Player_1_Scoreboard P1Score;
-
-=======
     public AudioClip[] attackSound;
     private AudioSource myAudioSource;
->>>>>>> e98cb6fceaeb10a60f89128d4fad3565d3481fe1
     // Start is called before the first frame update
     void Start()
     {
@@ -137,14 +132,18 @@ public class Player1G2 : Player
         Debug.Log("Knock!");
         Rigidbody2D enemyRb = enemy.GetComponent<Rigidbody2D>();
         SpriteRenderer enemySr = enemy.GetComponent<SpriteRenderer>();
+        Vector3 direction = (transform.position - enemy.transform.position).normalized;
+        float speed = 2000;
         if (enemySr.flipX)
         {
             enemyRb.velocity = new Vector2(knockbackForce, knockbackForce);
+            //enemyRb.AddForce(-direction * speed);
 
         }
         else
         {
             enemyRb.velocity = new Vector2(-knockbackForce, knockbackForce);
+            //enemyRb.AddForce(direction * speed);
             //Vector2 vel = enemyRb.velocity;
             //vel.x = knockbackForce;
             //enemyRb.velocity = vel;
