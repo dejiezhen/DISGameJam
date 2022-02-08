@@ -5,6 +5,24 @@ TextureImporter:
   - first:
       213: 4422208832514279244
     second: ducksabre_0
+  - first:
+      213: -1832689669717569659
+    second: ducksabre_1
+  - first:
+      213: 5680103435099533203
+    second: ducksabre_2
+  - first:
+      213: -2938590948182411100
+    second: ducksabre_3
+  - first:
+      213: 7075060888372961420
+    second: ducksabre_4
+  - first:
+      213: -2826984527128756856
+    second: ducksabre_5
+  - first:
+      213: -5955921339713531103
+    second: ducksabre_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -110,9 +128,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 78
-        width: 34
-        height: 31
+        y: 81
+        width: 32
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,6 +140,132 @@ TextureImporter:
       bones: []
       spriteID: c47cb98d087de5d30800000000000000
       internalID: 4422208832514279244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ducksabre_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 48
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58fc4f4947af096e0800000000000000
+      internalID: -1832689669717569659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ducksabre_2
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 49
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f6590daf7c3de40800000000000000
+      internalID: 5680103435099533203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ducksabre_3
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 48
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8b8691a170837d0800000000000000
+      internalID: -2938590948182411100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ducksabre_4
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 49
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80eab7846aaf2260800000000000000
+      internalID: 7075060888372961420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ducksabre_5
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 19
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88df6f2fc8884c8d0800000000000000
+      internalID: -2826984527128756856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ducksabre_6
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 44
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123d43ce811585da0800000000000000
+      internalID: -5955921339713531103
       vertices: []
       indices: 
       edges: []
