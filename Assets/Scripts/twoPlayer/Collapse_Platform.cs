@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Solid_Platform : MonoBehaviour
+public class Collapse_Platform : MonoBehaviour
 {
 
     public float contantTime;
