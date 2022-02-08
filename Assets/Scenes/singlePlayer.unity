@@ -1844,6 +1844,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UndeadEmpire2DAssets_0
       objectReference: {fileID: 0}
+    - target: {fileID: 5424138540055587502, guid: 7a07c50ebe6ee410a87c9284783d8b5a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8289366138296179981, guid: 7a07c50ebe6ee410a87c9284783d8b5a, type: 3}
       propertyPath: m_RootOrder
       value: 13
