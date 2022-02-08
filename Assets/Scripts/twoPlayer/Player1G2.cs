@@ -5,24 +5,31 @@ using UnityEngine;
 public class Player1G2 : Player
 {
 
-    public float jumpForce, sideForce, knockbackForce;
+    public float jumpForce, sideForce, knockbackForce, moveX, moveY;
     public int currentFrame;
     Rigidbody2D rb;
     SpriteRenderer sr;
     public Sprite[] spriteSideFrames;
     public Sprite[] spriteAttack;
+    public AudioClip[] attackSound;
+    private AudioSource myAudioSource;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        //attackSound = GetComponent<AudioSource>();
         currentFrame = 1;
+        myAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
         sr.sprite = spriteSideFrames[0];
+
+        moveX = 0;
+        moveY = 0;
 
         bool groundCheck= Physics2D.Raycast(transform.position, Vector2.down, .5f, LayerMask.GetMask("Floor"));
         bool secondGroundCheck = Physics2D.Raycast(transform.position, Vector2.down, .5f, LayerMask.GetMask("obstacle"));
@@ -35,14 +42,17 @@ public class Player1G2 : Player
   
             sr.flipX = true;
             spriteAnimation(spriteSideFrames, spriteSideFrames.Length);
-            rb.AddForce(Vector2.left * sideForce);
+            //rb.AddForce(Vector2.left * sideForce);
+            moveX = -sideForce;
         }
         if (Input.GetKey(KeyCode.D))
         {
             sr.flipX = false;
             spriteAnimation(spriteSideFrames, spriteSideFrames.Length);
-            rb.AddForce(Vector2.right * sideForce);
+            moveX = sideForce;
         }
+
+        rb.velocity = new Vector2(moveX, rb.velocity.y);
 
         //Vector2 origin = transform.position;
         //Vector2 horizontalTarget = origin;
@@ -58,6 +68,8 @@ public class Player1G2 : Player
         if (Input.GetKey(KeyCode.LeftShift))
         {
             sr.sprite = spriteAttack[0];
+            myAudioSource.PlayOneShot(attackSound[0]);
+
 
             //if (hitLeft)
             //{
@@ -68,7 +80,7 @@ public class Player1G2 : Player
             //}
         }
 
-      }
+    }
     //public void HitDirection(RaycastHit2D hit)
     //{
     //    Player player = hit.collider.gameObject.GetComponent<Player>();
@@ -110,6 +122,9 @@ public class Player1G2 : Player
         else
         {
             enemyRb.velocity = new Vector2(-knockbackForce, knockbackForce);
+            //Vector2 vel = enemyRb.velocity;
+            //vel.x = knockbackForce;
+            //enemyRb.velocity = vel;
 
         }
     }

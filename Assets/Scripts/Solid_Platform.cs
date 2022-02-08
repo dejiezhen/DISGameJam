@@ -28,7 +28,7 @@ public class Solid_Platform : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision2D col)
+    private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Player"))
         {
