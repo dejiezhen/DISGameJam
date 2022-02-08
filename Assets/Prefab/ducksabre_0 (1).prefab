@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4815225056747035567}
   - component: {fileID: 1714367552226669348}
   - component: {fileID: -2783715737808460024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ducksabre_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 0
   sideForce: 3
+  knockbackForce: 0
   currentFrame: 0
   spriteSideFrames: []
   spriteAttack: []
@@ -119,7 +120,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.882353, y: 1.6470588}
+    oldSize: {x: 1.0666667, y: 0.93333334}
     newSize: {x: 1.882353, y: 1.6470588}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
