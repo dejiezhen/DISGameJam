@@ -25,7 +25,8 @@ public class Player1G2 : Player
         sr.sprite = spriteSideFrames[0];
 
         bool groundCheck= Physics2D.Raycast(transform.position, Vector2.down, .5f, LayerMask.GetMask("Floor"));
-        if (Input.GetKeyDown(KeyCode.W) && groundCheck)
+        bool secondGroundCheck = Physics2D.Raycast(transform.position, Vector2.down, .5f, LayerMask.GetMask("obstacle"));
+        if (Input.GetKeyDown(KeyCode.W) && (groundCheck || secondGroundCheck))
         {
             rb.AddForce(Vector2.up * jumpForce);
         }

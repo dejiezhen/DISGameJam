@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 789735193097634993}
   - component: {fileID: 6745390524701619929}
   - component: {fileID: 118526885075846200}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ducksabre_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,6 +95,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e504076ca27d46fbb2888dea2c0995e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementHorizontal: 0
-  movementVertical: 0
-  speed: 2
+  jumpForce: 0
+  sideForce: 0
+  knockbackForce: 0
+  currentFrame: 0
+  spriteSideFrames: []
+  spriteAttack: []
