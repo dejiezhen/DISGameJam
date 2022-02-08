@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Lava
   - Platform
+  - Undefined
+  - Ball
   layers:
   - Default
   - TransparentFX
