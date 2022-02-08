@@ -11,14 +11,11 @@ public class Player1G2 : Player
     SpriteRenderer sr;
     public Sprite[] spriteSideFrames;
     public Sprite[] spriteAttack;
-<<<<<<< HEAD
 
     public Player_1_Scoreboard P1Score;
 
-=======
     public AudioClip[] attackSound;
     private AudioSource myAudioSource;
->>>>>>> e98cb6fceaeb10a60f89128d4fad3565d3481fe1
     // Start is called before the first frame update
     void Start()
     {
